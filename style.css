@@ -39,7 +39,9 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 15px;
+    width: 40%;
 }
 
 .btn {
@@ -57,8 +59,12 @@ main {
     font-family: 'Popins', sans-serif;
 }
 
+.texto-negrito {
+    font-weight: 700;
+}
+
 .btnPremium {
-    width: 515px;
+    width: 95%;
 }
 
 .form {
@@ -91,6 +97,17 @@ main {
     font-weight: 500;
 }
 
+.agreement {
+    font-size: 0.7em;
+    color: hsl(246, 25%, 77%);
+}
+
+.agreement a {
+    color: hsl(0, 100%, 74%);
+    font-weight: 700;
+    text-decoration: none;
+}
+
 .btnForm {
     background-color: hsl(154, 59%, 51%);
     width: 87%;
@@ -104,4 +121,10 @@ main {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1031px) {
+    .container {
+        flex-direction: column;
+    }
 }
