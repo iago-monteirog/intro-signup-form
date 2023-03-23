@@ -84,6 +84,7 @@ main {
 
 .formulario-campo {
     width: 85%;
+    position: relative;
 }
 
 .campo_escrita {
@@ -97,6 +98,14 @@ main {
     font-weight: 500;
 }
 
+.error-message {
+    color: hsl(0, 100%, 74%);
+    font-size: 0.6em;
+    display: flex;
+    justify-content: end;
+    margin-top: 5px;
+}
+
 .agreement {
     font-size: 0.7em;
     color: hsl(246, 25%, 77%);
@@ -108,11 +117,32 @@ main {
     text-decoration: none;
 }
 
+.red-placeholder::placeholder {
+    color: hsl(0, 100%, 74%);
+}
+
 .btnForm {
     background-color: hsl(154, 59%, 51%);
     width: 87%;
     font-weight: 600;
 }
+
+.btnForm:hover {
+    background-color: hsl(154, 70%, 70%);
+}
+
+.btnForm:active {
+    background-color: hsl(154, 20%, 30%);
+}
+
+.icon-error {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+}
+
 
 .attribution {
     font-size: 11px;
@@ -126,5 +156,7 @@ main {
 @media (max-width: 1031px) {
     .container {
         flex-direction: column;
+        height: 180vh;
+        gap: 20px;
     }
 }
